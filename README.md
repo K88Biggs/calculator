@@ -5,7 +5,8 @@ This program is a simple calculator written in C++. It prompts the user to enter
 Prompts the user to enter two numbers.
 Calculates and displays the sum, multiplication, subtraction, division, and modulus of the two numbers.
 Handles division by zero by displaying an appropriate message.
-Code Explanation
+# Code Explanation
+
 #include <iostream> // Includes the iostream library for input/output operations
 using namespace std; // Allows the use of standard library names without the std:: prefix
 
