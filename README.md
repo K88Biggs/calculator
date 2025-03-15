@@ -39,8 +39,8 @@ int main() {
     return 0; // Indicates successful execution
 }
 # How to Run
-Make sure you have a C++ compiler installed on your system.
-Save the code to a file named calculator.cpp.
-Open a terminal or command prompt and navigate to the directory where calculator.cpp is saved.
-Compile the code using the command: g++ calculator.cpp -o calculator
-Run the compiled program using the command: ./calculator (on Unix-based systems) or calculator.exe (on Windows).
+1. Make sure you have a C++ compiler installed on your system.
+2. Save the code to a file named calculator.cpp.
+3. Open a terminal or command prompt and navigate to the directory where calculator.cpp is saved.
+4. Compile the code using the command: g++ calculator.cpp -o calculator
+5. Run the compiled program using the command: ./calculator (on Unix-based systems) or calculator.exe (on Windows).
