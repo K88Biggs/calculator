@@ -1,46 +1,34 @@
-# Description
-This program is a simple calculator written in C++. It prompts the user to enter two numbers and then performs basic arithmetic operations (addition, multiplication, subtraction, division, and modulus) on those numbers. The results are displayed to the user.
+# Advanced Calculator (C++)
 
-# Features
-Prompts the user to enter two numbers.
-Calculates and displays the sum, multiplication, subtraction, division, and modulus of the two numbers.
-Handles division by zero by displaying an appropriate message.
-# Code Explanation
+This project is an interactive **advanced calculator** written in C++. It provides both basic arithmetic and common scientific functions through a menu-driven interface.
 
-#include <iostream> // Includes the iostream library for input/output operations
-using namespace std; // Allows the use of standard library names without the std:: prefix
+## Features
 
-int main() {
-    double x; // Variable declarations for storing user input
-    double y;
+- Basic arithmetic:
+  - Addition
+  - Subtraction
+  - Multiplication
+  - Division (with divide-by-zero protection)
+- Advanced operations:
+  - Power (`x^y`)
+  - Square root
+  - Trigonometric functions (`sin`, `cos`, `tan`) using degree input
+  - Logarithms (`ln` and `log10`)
+  - Factorial (supports whole numbers from `0` to `20`)
+- Input validation for both numbers and menu choices
+- Calculation history that can be viewed at any time
 
-    cout << "Enter a number: "; // Prompts the user to enter the first number
-    cin >> x;
-    cout << "Enter another number: "; // Prompts the user to enter the second number
-    cin >> y;
+## Build and Run
 
-    double mySum = x + y; // Calculates the sum of x and y
-    double myMultiplication = x * y; // Calculates the multiplication of x and y
-    double mySubtraction = x - y; // Calculates the subtraction of y from x
-    double myDivision = (y != 0) ? x / y : 0; // Calculates the division of x by y, avoiding division by zero
-    int myMod = (y != 0) ? static_cast<int>(x) % static_cast<int>(y) : 0; // Calculates the modulus of x and y, avoiding division by zero
+From the project root:
 
-    // Displays the results of the calculations
-    cout << "Sum: " << mySum << endl;
-    cout << "Multiplication: " << myMultiplication << endl;
-    cout << "Subtraction: " << mySubtraction << endl;
-    if (y != 0) {
-        cout << "Division: " << myDivision << endl;
-        cout << "Modulus: " << myMod << endl;
-    } else {
-        cout << "Division and Modulus: Undefined (division by zero)" << endl;
-    }
+```bash
+g++ -std=c++17 -Wall -Wextra -pedantic main.cpp -o calculator
+./calculator
+```
 
-    return 0; // Indicates successful execution
-}
-# How to Run
-1. Make sure you have a C++ compiler installed on your system.
-2. Save the code to a file named calculator.cpp.
-3. Open a terminal or command prompt and navigate to the directory where calculator.cpp is saved.
-4. Compile the code using the command: g++ calculator.cpp -o calculator
-5. Run the compiled program using the command: ./calculator (on Unix-based systems) or calculator.exe (on Windows).
+## Notes
+
+- Trigonometric inputs are entered in **degrees**.
+- Factorial is limited to `0..20` to avoid integer overflow.
+- History stores successful calculations only.
